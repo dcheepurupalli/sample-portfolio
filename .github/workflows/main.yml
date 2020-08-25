@@ -34,6 +34,7 @@ jobs:
         # Git User Name (default: "GitHub Action")
         name: dcheepurupalli
         # GitHub Actor Username (default: github.actor)
+        actor: dcheepurupalli  
         # GitHub Token (default: secrets.GITHUB_TOKEN)
         token: 8c39236237078430a808cf59abcf150a67f57426
     
