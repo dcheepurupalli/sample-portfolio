@@ -26,17 +26,13 @@ jobs:
     - name: Run a one-line script
       run: echo Hello, world!
       
-    - name: Configure git credentials
-      uses: OleksiyRudenko/gha-git-credentials@v1
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        # <git-user-email@domain.com> (default: github-action@users.noreply.github.com)
-        email: dileep.cheepurupalli@gmail.com
-        # Git User Name (default: "GitHub Action")
-        name: dcheepurupalli
-        # GitHub Actor Username (default: github.actor)
-        actor: dcheepurupalli  
-        # GitHub Token (default: secrets.GITHUB_TOKEN)
-        token: 8c39236237078430a808cf59abcf150a67f57426
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
     
     - name: Install and Build 🔧
       run: |
