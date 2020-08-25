@@ -28,12 +28,8 @@ jobs:
     
     - name: Install and Build 🔧
       run: |
+        git config user.name "dcheepurupalli"
+        git config user.email "dileep.cheepurupalli@gmail.com"
         npm install
-        npm run build 
-    
-    - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@3.5.9
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: build # The folder the action should deploy.
+        npm run build
+        npm run deploy
