@@ -1,0 +1,25 @@
+{
+  "name": " ",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": "",
+  "license": "",
+  "author": "",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production parcel build index.html --public-url .",
+    "dev": "parcel index.html --open",
+    "start": "npm run build && npm run dev",
+    "deploy": "gh-pages -d dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.10"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.2",
+    "fullpage.js": "^3.0.9",
+    "gh-pages": "^3.1.0",
+    "gsap": "^3.5.0"
+  }
+}
